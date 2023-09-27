@@ -11,7 +11,7 @@
 
     <form id="create-task-form" action="" method="POST">
       <label for="new-task-description">Task description:</label>
-      <input type="text" id="new-task-description" name="new-task-description" placeholder="description">
+      <input type="text" id="taskDescription" name="new-task-description" placeholder="description">
       <input type="submit" value="Create New Task">
     </form>
 
@@ -20,7 +20,31 @@
       <ul id="tasks">
       </ul>
     </div>
+    <div class="container mt-3">
+      <h2>Add Items</h2>
 
+      <label id="lblsuccess" class="text-success" style="display: none;">
+      </label>
+
+      <form id="addForm">
+          <div class="row">
+              <div class="col-lg-7 col-md-7 col-sm-7">
+
+                  <input type="text" onkeyup="toggleButton(this, 'submit')" class="form-control" id="item">
+              </div>
+
+              <div class="col-lg-5 col-md-5 col-sm-5">
+                  <input type="submit" class="btn btn-dark" id="submit" value="Submit" disabled>
+              </div>
+          </div>
+      </form>
+
+      <h3 class="mt-4">Tasks</h3>
+
+      <form id="addForm">
+          <ul class="list-group" id="items"></ul>
+      </form>
+  </div>
     <script src="./src/index.js"></script>
   </div>
 
